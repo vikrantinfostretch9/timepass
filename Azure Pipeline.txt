@@ -1,0 +1,18 @@
+Flow of azure pipeline for ios
+
+Requirment:-
+
+ 1)Mac machine as agent/slave
+ 2) xcode  as Building tool
+ 3)Apple certificate / key chain
+ 4)Apple provision profile
+ 5)cocoa pods
+
+azure pipeline steps:-
+
+ 1.  macos hosted agent
+ 2. install apple certificate
+ 3. install apple provision profile
+ 4. archive file / copy file #to copy artifacts
+ 5. Publish build artifacts
+ 

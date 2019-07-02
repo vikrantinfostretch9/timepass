@@ -1,0 +1,67 @@
+- name: Update apt cache
+  become: yes
+  apt: update_cache=yes cache_valid_time={{apt_cache_timeout}}
+  tags: bootstrap
+
+- name: create group
+  become: yes
+  group:
+    name: kafka
+    state: present
+  tags: kafka
+
+- name: create user
+  become: yes
+  user:
+    name: kafka
+    group: kafka
+  tags: kafka
+
+- name: Setting internal variable
+  become: yes
+  set_fact:
+    kafka_name: kafka_{{ kafka.scala_version }}-{{ kafka.version }}
+  tags: kafka
+
+- name: Setting internal variable
+  become: yes
+  set_fact:
+    kafka_dir: "{{ kafka.install_dir }}/{{ kafka_name }}"
+  tags: kafka
+
+- name: check if tar has been downloaded
+  become: yes
+  command: test -f {{ kafka.download_dir }}/{{ kafka_name }}.tgz
+  register: kafka_tar_downloaded
+  failed_when: kafka_tar_downloaded.rc not in [0, 1]
+  changed_when: False
+  tags: kafka
+
+- name: Ensure Kafka tar is downloaded
+  become: yes
+  get_url:
+    url: https://www.apache.org/dyn/closer.cgi?path=/kafka/2.1.1/kafka-2.1.1-src.tgz
+    dest: /home/vagrant/kafka/
+  tags: kafka
+  when: kafka_tar_downloaded.rc == 1
+
+- name: Ensure tar is extracted
+  become: yes
+  unarchive:
+    src: /home/vagrant/kafka/
+    dest: /home/vagrant/kafka/
+    remote_src: yes
+  tags: kafka
+
+# Config and start Kafka
+- name: Ensures data dir "{{ kafka.data_dir }}" exists
+  become: yes
+  file:
+    path: "{{ kafka.data_dir }}"
+    state: directory
+    owner: kafka
+    group: kafka
+  tags: kafka
+
+- name: Copy real config
+  become: yes

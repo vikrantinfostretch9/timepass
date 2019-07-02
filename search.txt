@@ -1,0 +1,15 @@
+spinnaker
+application laifecycle management tool :- new relic
+rundeck, capistrano
+
+
+*******************************************************CICD IOS APP*********************************************************************
+
+LINK - https://bugfender.com/blog/how-to-add-your-first-ios-job-to-jenkins/
+
+LINK - https://medium.com/livefront/basic-continuous-integration-with-jenkins-xcode-and-github-e999673e73b4
+
+
+
+https://github.com/vikrantpaigude/petclinic
+

@@ -1,0 +1,115 @@
+Scripting with Python 3
+Basic Scripting
+
+Reading User Input
+00:06:57
+Function Basics
+00:06:39
+Using Functions in Scripts
+00:16:33
+Using Standard Library Packages
+00:12:39
+Working with Environment Variables
+00:06:12
+Interacting with Files
+00:19:35
+
+Intermediate Scripting
+
+Parsing Command Line Parameters
+00:05:39
+Robust CLIs with 'argparse' - Part 1
+00:13:56
+Robust CLIs with 'argparse' - Part 2
+00:07:08
+Handling Errors with try/except/else/finally
+00:09:13
+Exit Statuses
+00:03:11
+Execute Shell Commands from Python
+00:12:47
+Advanced Iteration with List Comprehensions
+00:11:10
+
+Useful Standard Library Packages
+
+random & json
+00:11:53
+shutil & glob
+00:16:57
+re & math
+00:15:58
+Exercise: Creating and Using Functions
+Available
+Exercise: Using the 'os' Package and Environment Variables
+Available
+Exercise: Creating Files Based on User Input
+Available
+Exercise: Handling Errors When Files Don't Exist
+Available
+Exercise: Interacting with External Commands
+Available
+Exercise: Setting Exit Status on Error
+Available
+Quiz: Python Scripting and IO
+Available
+
+Third-Party Packages
+
+Using Pip and Virtualenv
+Installing Third-Party Packages Using 'pip'
+00:09:03
+Virtualenv
+00:05:07
+Using Third-Party Packages in Your Scripts
+00:14:34
+Exercise: Installing Third-Party Packages
+Available
+Exercise: Utilizing Third-Party Packages
+Available
+Quiz: Python Packages and Dependencies
+Available
+
+Creating a Larger Scripting Project
+
+Planning & Project Structure
+Examining the Problem & Prep Work
+00:08:03
+Planning Through Documentation
+00:15:18
+Initial Project Layout
+00:14:01
+
+Implementing Features with Test Driven Development
+
+Introduction to TDD and First Tests
+00:14:22
+Implementing CLI Guided By Tests
+00:22:54
+Introduction to Mocking in Tests
+00:12:03
+Implementing PostgreSQL Interaction
+00:11:26
+Implementing Local File Storage
+00:08:54
+Implementing AWS Interaction
+00:14:08
+
+Integrating Features and Distributing the Project
+
+Wiring the Units Together
+00:19:00
+Building and Sharing a Wheel Distribution
+00:06:52
+Exercise: Creating a Python Project
+Available
+Exercise: Test Drive Building a CLI Parser
+Available
+Exercise: Implementing User Management
+Available
+Exercise: JSON Parsing and Exporting
+Available
+Exercise: Creating the Console Script
+Available
+Exercise: Building a Wheel Distribution
+Available
